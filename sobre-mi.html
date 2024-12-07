@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/yo/desarrolladora.png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- INCLUYO TAILWIND CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // VARIABLES DE COLORES PERSONALIZADOS PARA REUTILIZARLOS
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fondo: "#0f021a",
+            violeta: '#3b0764',
+            lila: "#b77ce6",
+          }
+        }
+      }
+    }
+  </script>
+  <title>Victoria Raineri</title>
+</head>
+<body>
+    <!-- BARRA DE NAVEGACIÓN  -->
+    <header id="header-background">
+        <div class="header-cont">
+          <a href="index.html">Victoria Raineri</a>
+          <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+          <nav class="nav-links">
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li class="text-lila"><a href="sobre-mi.html">Sobre mí</a></li>
+              <li><a href="proyectos.html">Proyectos</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>    
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="mt-24 mx-16 md:mx-32">
+        <!-- INTRODUCCIÓN SOBRE MI (DATOS Y VALORES PERSONALES) -->
+        <h1 class="text-lila text-2xl font-bold">Sobre mi</h1>
+        <p class="mt-8">Soy Victoria Raineri, tengo 20 años y vivo en Monte Grande, Buenos Aires. Desde que soy chica, me apasiona el mundo de la tecnología. Es por eso que, al finalizar el colegio secundario, me inscribí en un curso intensivo de desarrollo web y, actualmente, me encuentro estudiando la carrera de Licenciatura en Gestión de Tecnologías de la Información en la UADE.</p>
+        <p class="mt-2">Soy una profesional apasionada por el desarrollo web, con una habilidad para resolver problemas de manera creativa y eficiente. Me destaco en el trabajo en equipo, colaborando estrechamente con colegas para lograr objetivos comunes y crear soluciones impactantes.</p>
+
+        <!-- TECNOLOGÍAS CONOCIDAS + NIVEL DE EXPERIENCIA EN ELLAS -->
+        <h1 class="mt-10 text-lila text-xl font-bold">Tecnologías con las que trabajé</h1>
+        
+        <div class="mt-2 flex flex-col gap-y-16 md:flex-row justify-center gap-x-16 lg:gap-x-24 md:mx-10">
+
+          <div class="my-10 flex flex-wrap gap-y-16 gap-x-24 justify-center bg-black/30 h-fit p-10 border-2 border-violeta border-b-lila shadow-md shadow-lila/50 rounded-3xl outline-none select-none">
+
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/HTML.png" alt="HTML" class="h-16"/>
+              <p class="mt-2 font-bold">HTML</p>
+              <p>Avanzado</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/CSS.png" alt="CSS" class="h-16"/>
+              <p class="mt-2 font-bold">CSS</p>
+              <p>Avanzado</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/JS.png" alt="JAVASCRIPT" class="h-16"/>
+              <p class="mt-2 font-bold">JavaScript</p>
+              <p>Avanzado</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/REACTJS.png" alt="REACT" class="h-16"/>
+              <p class="mt-2 font-bold">React.js</p>
+              <p>Intermedio</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/REDUX.png" alt="REDUX" class="h-16"/>
+              <p class="mt-2 font-bold">Redux</p>
+              <p>Intermedio</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/TAILWIND.png" alt="TAILWIND" class="h-16"/>
+              <p class="mt-2 font-bold">Tailwind CSS</p>
+              <p>Avanzado</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/EXPRESSJS.png" alt="EXPRESS" class="h-16"/>
+              <p class="mt-2 font-bold">Express.js</p>
+              <p>Avanzado</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/NODEJS.png" alt="NODE" class="h-16"/>
+              <p class="mt-2 font-bold">Node.js</p>
+              <p>Avanzado</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/PYTHON.png" alt="PYTHON" class="h-16"/>
+              <p class="mt-2 font-bold">Python</p>
+              <p>Básico</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/FIREBASE.png" alt="FIREBASE" class="h-16"/>
+              <p class="mt-2 font-bold">Firebase</p>
+              <p>Intermedio</p>
+            </div>
+            <div class="flex flex-col items-center hover:scale-105">
+              <img src="assets/tecnologias/POSTGRESQL.png" alt="POSTGRESQL" class="h-16"/>
+              <p class="mt-2 font-bold">PostgreSQL</p>
+              <p>Intermedio</p>
+            </div>
+
+          </div>
+        </div> 
+        
+        <!-- VISUALIZAR Y/O DESCARGAR MI CV -->
+        <div class="my-10 flex flex-col md:flex-row gap-y-10 gap-x-20 justify-center text-center">
+        <a href="assets/yo/Victoria_Raineri_CV.pdf" target="_blank"><button class="px-3 py-2 bg-white text-fondo rounded-md font-bold hover:scale-105">Visualizar mi CV</button></a>
+        <a href="assets/yo/Victoria_Raineri_CV.pdf" download="assets/yo/Victoria_Raineri_CV.pdf"><button class="px-3 py-2 bg-white text-fondo rounded-md font-bold hover:scale-105">Descargar mi CV</button></a>
+        </div>
+      </main>
+
+    <!-- FOOTER  -->
+    <footer class="relative mt-16">
+        <div>
+        © 2024 Mi portafolio - Todos los derechos reservados
+        </div>
+    </footer>
+
+    <!-- BOTÓN PARA IR HACIA ARRIBA (EN CASO DE SER NECESARIO) -->
+    <div id="scroll" class="fixed z-[100] right-3 md:right-6 bottom-6 ml-5 hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-12 h-12 bg-gray-300 stroke-fondo p-3 rounded-full hover:bg-gray-400 cursor-pointer transition-all">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+      </svg>
+    </div>
+
+  <!-- INCLUYO ARCHIVO JS PARA FUNCIONALIDADES -->
+  <script src="index.js"></script>
+</body>
+</html>

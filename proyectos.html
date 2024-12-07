@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/yo/desarrolladora.png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- INCLUYO TAILWIND CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // VARIABLES DE COLORES PERSONALIZADOS PARA REUTILIZARLOS
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fondo: "#0f021a",
+            violeta: '#3b0764',
+            lila: "#b77ce6",
+          }
+        }
+      }
+    }
+  </script>
+  <title>Victoria Raineri</title>
+</head>
+<body>
+    <!-- BARRA DE NAVEGACIÓN  -->
+    <header id="header-background">
+        <div class="header-cont">
+            <a href="index.html">Victoria Raineri</a>
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li class="text-lila"><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="mt-24 mx-16 md:mx-32">
+      <!-- INTRODUCCIÓN A PROYECTOS -->
+      <h1 class="text-lila text-2xl font-bold">Proyectos</h1>
+      <p class="my-5">Estos son algunos de los proyectos que realicé:</p>
+
+      <!-- PROYECTOS CON IMAGEN + DETALLE -->
+      <section class="container mx-auto px-4">
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-black/50 p-6 rounded-3xl text-center text-white border-2 border-violeta border-b-lila shadow-md shadow-lila/50">
+            <a href="https://henryvideogamespi.vercel.app/" target="_blank">
+              <img
+                src="./assets/proyectos/Videogames.png"
+                alt="Henry Videogames"
+                class="w-full rounded-lg mb-4"
+              />
+            </a>
+            <h3 class="text-lg font-semibold mb-2">Henry Videogames</h3>
+            <p>
+              Proyecto individual hecho durante el bootcamp de Henry. Sitio web que
+              permite al usuario visualizar, ordenar, filtrar y observar los
+              detalles de diversos videojuegos. Además, presenta la opción de crear
+              un videojuego propio. Fue desarrollada utilizando HTML, CSS,
+              JavaScript, React.js y Redux.
+            </p>
+          </div>
+    
+          <div class="bg-black/50 p-6 rounded-3xl text-center text-white border-2 border-violeta border-b-lila shadow-md shadow-lila/50">
+            <a href="https://github.com/silvina-varela/E-commerce" target="_blank">
+              <img
+                src="./assets/proyectos/RoyalMakeup.png"
+                alt="Royal Makeup"
+                class="w-full rounded-lg mb-4"
+              />
+            </a>
+            <h3 class="text-lg font-semibold mb-2">Royal Makeup</h3>
+            <p>
+              Proyecto grupal hecho durante el bootcamp de Henry. E-Commerce que
+              contiene un home, catálogo, perfiles de usuario, carrito de compras,
+              compras con PayPal, servicio de mail y página de administrador. Las
+              tecnologías utilizadas fueron: HTML, CSS, JavaScript, Tailwind CSS,
+              React.js, Material UI, Redux, Sequelize, Express.js, Node.js,
+              PostgreSQL, Nodemailer y Firebase Authentication.
+            </p>
+          </div>
+    
+          <div class="bg-black/50 p-6 rounded-3xl text-center text-white border-2 border-violeta border-b-lila shadow-md shadow-lila/50">
+            <a href="https://buscadogqr.vercel.app" target="_blank">
+              <img
+                src="./assets/proyectos/BuscadogQR.png"
+                alt="BuscadogQR"
+                class="w-full rounded-lg mb-4"
+              />
+            </a>
+            <h3 class="text-lg font-semibold mb-2">BuscadogQR</h3>
+            <p>
+              Desarrollo de una página web con el objetivo de solucionar la búsqueda
+              de mascotas perdidas. Fue desarrollada usando JavaScript, HTML, CSS,
+              Tailwind CSS, React.js y Firebase.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>      
+
+    <!-- FOOTER  -->
+    <footer class="relative mt-16">
+        <div>
+        © 2024 Mi portafolio - Todos los derechos reservados
+        </div>
+    </footer>
+
+    <!-- BOTÓN PARA IR HACIA ARRIBA (EN CASO DE SER NECESARIO) -->
+    <div id="scroll" class="fixed z-[100] right-3 md:right-6 bottom-6 ml-5 hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-12 h-12 bg-gray-300 stroke-fondo p-3 rounded-full hover:bg-gray-400 cursor-pointer transition-all">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+      </svg>
+    </div>
+
+  <!-- INCLUYO ARCHIVO JS PARA FUNCIONALIDADES -->
+  <script src="index.js"></script>
+</body>
+</html>

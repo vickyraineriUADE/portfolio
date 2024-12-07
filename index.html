@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/yo/desarrolladora.png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- INCLUYO TAILWIND CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // VARIABLES DE COLORES PERSONALIZADOS PARA REUTILIZARLOS
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lila: "#b77ce6",
+            violeta: '#3b0764'
+          }
+        }
+      }
+    }
+  </script>
+  <title>Victoria Raineri</title>
+</head>
+<body>
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header id="header-background">
+    <div class="header-cont">
+      <a href="index.html">Victoria Raineri</a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="nav-links">
+        <ul>
+          <li class="text-lila"><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>  
+
+  <!-- CONTENIDO PRINCIPAL (INTRODUCCIÓN + IMAGEN) -->
+  <main class="mt-32 md:mt-48 md:mx-36 text-center">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-x-22">
+        <div class="text-3xl mx-16">
+          <h1 class="font-bold animate-bounce">¡Hola! Soy <span class="text-lila">Victoria Raineri</span></h1>
+          <p><span class="text-lila">Desarrolladora web</span> especializada en soluciones creativas y funcionales.</p>
+        </div>
+        <img src="./assets/yo/victoria_raineri.jpeg" alt="Victoria Raineri" class="h-[15rem] my-10 md:my-0 md:h-[20rem] rounded-full"/>
+      </div>
+    </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      © 2024 Mi portafolio - Todos los derechos reservados
+    </div>
+  </footer>
+
+  <!-- BOTÓN PARA IR HACIA ARRIBA (EN CASO DE SER NECESARIO) -->
+  <div id="scroll" class="fixed z-[100] right-3 md:right-6 bottom-6 ml-5 hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-12 h-12 bg-gray-300 stroke-fondo p-3 rounded-full hover:bg-gray-400 cursor-pointer transition-all">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+    </svg>
+  </div>
+
+  <!-- INCLUYO ARCHIVO JS PARA FUNCIONALIDADES -->
+  <script src="index.js"></script>
+</body>
+</html>

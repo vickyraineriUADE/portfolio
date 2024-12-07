@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/yo/desarrolladora.png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- INCLUYO TAILWIND CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // VARIABLES DE COLORES PERSONALIZADOS PARA REUTILIZARLOS
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fondo: "#0f021a",
+            violeta: '#3b0764',
+            lila: "#b77ce6",
+          }
+        }
+      }
+    }
+  </script>
+  <title>Victoria Raineri</title>
+</head>
+<body>
+    <!-- BARRA DE NAVEGACIÓN  -->  
+    <header id="header-background">
+        <div class="header-cont">
+          <a href="index.html">Victoria Raineri</a>
+          <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+          <nav class="nav-links">
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="sobre-mi.html">Sobre mí</a></li>
+              <li><a href="proyectos.html">Proyectos</a></li>
+              <li class="text-lila"><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>   
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="mt-24 mx-16 md:mx-32">
+        <h1 class="text-lila text-2xl font-bold">Contacto</h1>
+        
+        <!-- FORMULARIO DE CONTACTO VALIDADO (NOMBRE, MAIL Y MOTIVO DE CONTACTO))  -->
+        <form id="formulario" class="mt-10 flex flex-col gap-y-5">
+          <div class="flex flex-col gap-y-2">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" name="nombre" value="" placeholder="Ingrese su nombre aquí" class="p-2 rounded-lg bg-black/50 text-white border-2 border-violeta focus:border-b-lila shadow-md shadow-lila/50 outline-none" required/>
+            <p id="error_nombre" class="text-red-400 ml-2 hidden">Ingrese un nombre válido</p>
+          </div>
+
+          <div class="flex flex-col gap-y-2">
+            <label for="mail">Mail:</label>
+            <input id="mail" type="text" name="mail" value="" placeholder="Ingrese su mail aquí" class="p-2 rounded-lg bg-black/50 text-white border-2 border-violeta focus:border-b-lila shadow-md shadow-lila/50 outline-none" required/>
+            <p id="error_mail" class="text-red-400 ml-2 hidden">Ingrese un mail válido</p>
+          </div>
+
+          <div class="flex flex-col gap-y-2">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" type="text" name="mensaje" value="" placeholder="Ingrese su motivo de contacto aquí" class="p-2 rounded-lg bg-black/50 text-white border-2 border-violeta focus:border-b-lila shadow-md shadow-lila/50 pb-16 outline-none" required></textarea>
+            <p id="error_mensaje" class="text-red-400 ml-2 hidden">Ingrese un motivo de contacto válido (entre 10 y 500 caracteres)</p>
+          </div>
+
+          <!-- ENVIAR CONSULTA -->
+          <button id="enviar" type="submit" class="px-3 py-2 mt-5 bg-white text-fondo rounded-md font-bold w-fit self-center hover:scale-105 disabled:cursor-not-allowed disabled:bg-gray-300">Enviar consulta</button>
+
+          <!-- MENSAJE DE CONFIRMACIÓN + BOTÓN PARA VOLVER AL INICIO -->
+          <div id="confirmacion" class="text-center hidden">
+            <p class="text-green-400 select-none">¡Consulta enviada correctamente!</p>
+            <a href="inicio.html" class="hover:underline">Volver al inicio</a>
+          </div>
+        </form>
+
+        <!-- OTROS MEDIOS DE CONTACTO (GMAIL, LINKEDIN Y GITHUB) -->
+        <div class="mt-24 md:my-28">
+          <h1 class="text-lila text-xl font-bold">Podes encontrarme en:</h1>
+            <div class="flex flex-col gap-y-16 md:flex-row justify-center gap-x-16 lg:gap-x-24 mt-16">
+              <a href="https://www.linkedin.com/in/victoria-raineri-657b64246/" target="_blank" class="flex flex-col items-center gap-y-5 self-center bg-black/30 h-fit p-10 border-2 border-violeta border-b-lila shadow-md shadow-lila/50 rounded-3xl hover:scale-110 outline-none">
+                <img src="assets/contacto/Linkedin.png" alt="LinkedIn" class="h-32 md:h-16 lg:h-32 w-auto"/>
+                <h class="font-semibold">LinkedIn</h>
+              </a>
+              <a href="https://github.com/vickyraineri" target="_blank" class="flex flex-col items-center gap-y-5 self-center bg-black/30 h-fit p-10 border-2 border-violeta border-b-lila shadow-md shadow-lila/50 rounded-3xl hover:scale-110 outline-none">
+              <img src="assets/contacto/Github.png" alt="GitHub" class="h-32 md:h-16 lg:h-32 w-auto"/>
+                  <h class="font-semibold">GitHub</h>
+              </a>
+              <a href="mailto:vickyraineri04@gmail.com" target="_blank" class="flex flex-col items-center gap-y-5 self-center bg-black/30 h-fit p-10 py-12 border-2 border-violeta border-b-lila shadow-md shadow-lila/50 rounded-3xl hover:scale-110 outline-none">
+                  <img src="assets/contacto/Gmail.webp" alt="Gmail" class="h-24 md:h-14 lg:h-[6.5rem] w-auto"/>
+                  <h class="font-semibold">Gmail</h>
+              </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer class="relative mt-16">
+        <div>
+        © 2024 Mi portafolio - Todos los derechos reservados
+        </div>
+    </footer>
+
+    <!-- BOTÓN PARA IR HACIA ARRIBA (EN CASO DE SER NECESARIO) -->
+    <div id="scroll" class="fixed z-[100] right-3 md:right-6 bottom-6 ml-5 hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-12 h-12 bg-gray-300 stroke-fondo p-3 rounded-full hover:bg-gray-400 cursor-pointer transition-all">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+      </svg>
+    </div>
+
+  <!-- INCLUYO ARCHIVO JS PARA FUNCIONALIDADES -->
+  <script src="index.js"></script>
+</body>
+</html>
